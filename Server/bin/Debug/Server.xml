@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Server</name>
+    </assembly>
+    <members>
+        <member name="T:Server.Orders">
+            <summary>
+            Клас екранної форми, який реалізує функціонал таблиці замовлень з бази даних
+            </summary>
+            <summary>
+            Orders
+            </summary>
+        </member>
+        <member name="M:Server.Orders.#ctor">
+            <summary>
+            Конструктор, що ініціалізує віконний компонент,
+            а також отримує таблиці з бази даних, аби реалізувати функціонал компонентів ComboBox
+            </summary>
+        </member>
+        <member name="M:Server.Orders.Window_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Обробник подій, який виконується після закриття вікна користувачем
+            </summary>
+        </member>
+        <member name="M:Server.Orders.OnPropertyChanged(System.String)">
+            <summary>
+            Метод, який оновлює у базі даних дату при зміні значення у компоненті DatePicker
+            </summary>
+            <param name="propertyName">Нове значення типу рядок</param>
+        </member>
+        <member name="M:Server.Orders.ComboBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обробник подій, який викликається тоді, коли користувач змінує значення у компоненті ComboBox,
+            який відповідає за товар
+            </summary>
+        </member>
+        <member name="M:Server.Orders.ComboBox_SelectionChanged_1(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обробник подій, який викликається тоді, коли користувач змінує значення у компоненті ComboBox,
+            який відповідає за користувача
+            </summary>
+        </member>
+        <member name="M:Server.Orders.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Server.Reviews">
+            <summary>
+            Клас екранної форми, який реалізує функціонал таблиці відгуків з бази даних
+            </summary>
+            <summary>
+            Reviews
+            </summary>
+        </member>
+        <member name="M:Server.Reviews.#ctor">
+            <summary>
+            Конструктор, що ініціалізує віконний компонент,
+            а також отримує таблиці з бази даних, аби реалізувати функціонал компонентів ComboBox
+            </summary>
+        </member>
+        <member name="M:Server.Reviews.Window_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Обробник подій, який виконується після закриття вікна користувачем
+            </summary>
+        </member>
+        <member name="M:Server.Reviews.OnPropertyChanged(System.String)">
+            <summary>
+            Метод, який оновлює у базі даних дату при зміні значення у компоненті DatePicker
+            </summary>
+            <param name="propertyName">Нове значення типу рядок</param>
+        </member>
+        <member name="M:Server.Reviews.ComboBox_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обробник подій, який викликається тоді, коли користувач змінує значення у компоненті ComboBox,
+            який відповідає за товар
+            </summary>
+        </member>
+        <member name="M:Server.Reviews.ComboBox_SelectionChanged_1(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обробник подій, який викликається тоді, коли користувач змінує значення у компоненті ComboBox,
+            який відповідає за користувача
+            </summary>
+        </member>
+        <member name="M:Server.Reviews.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Server.PurchaseDeed">
+            <summary>
+            Клас екранної форми для взаємодії з документом "Купівельний акт"
+            </summary>
+            <summary>
+            PurchaseDeed
+            </summary>
+        </member>
+        <member name="M:Server.PurchaseDeed.#ctor">
+            <summary>
+            Конструктор, який встановлює у компонент DataGrid дані з бази даних
+            </summary>
+        </member>
+        <member name="M:Server.PurchaseDeed.DataGridOrders_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обробник подій при обранні запису з бази даних
+            </summary>
+        </member>
+        <member name="M:Server.PurchaseDeed.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник події при натисканні на пункт меню "Роздрукування"
+            </summary>
+        </member>
+        <member name="M:Server.PurchaseDeed.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Server.StaticConstants">
+            <summary>
+            Клас для спільного доступу з будь-яких вікон
+            </summary>
+        </member>
+        <member name="M:Server.StaticConstants.CreateConnection(System.String)">
+            <summary>
+            Метод, який створює підключення до бази даних
+            </summary>
+            <param name="connection">Посилання для підключення до бази даних</param>
+        </member>
+        <member name="M:Server.StaticConstants.DropDatabase">
+            <summary>
+            Метод, який видаляє базу даних
+            </summary>
+            <returns>true, якщо видалення успішне, інакше - false</returns>
+        </member>
+        <member name="M:Server.StaticConstants.TrySubmitChanges">
+            <summary>
+            Метод, який дозволяє зберігти дані у базі даних, а якщо виникла помилка - повідомити про це користувача
+            Цей метод може використовуватись будь-де у програмі
+            </summary>
+        </member>
+        <member name="T:Server.Statistics">
+            <summary>
+            Клас екранної форми для побудови та збереження графіків
+            </summary>
+            <summary>
+            Statistics
+            </summary>
+        </member>
+        <member name="M:Server.Statistics.#ctor">
+            <summary>
+            Конструктор, який ініціалізує вікно та будує графік
+            </summary>
+        </member>
+        <member name="M:Server.Statistics.UpdateChart">
+            <summary>
+            Метод для оновлення графіку
+            </summary>
+        </member>
+        <member name="M:Server.Statistics.StartDate_SelectedDateChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обробник подій при зміні дати
+            </summary>
+        </member>
+        <member name="M:Server.Statistics.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник подій при натисканні на кнопку збереження графіку
+            </summary>
+        </member>
+        <member name="M:Server.Statistics.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Server.Users">
+            <summary>
+            Клас екранної форми, який реалізує функціонал таблиці користувачів з бази даних
+            </summary>
+            <summary>
+            Users
+            </summary>
+        </member>
+        <member name="M:Server.Users.#ctor">
+            <summary>
+            Конструктор, що ініціалізує віконний компонент
+            </summary>
+        </member>
+        <member name="M:Server.Users.Window_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Обробник подій, який виконується після закриття вікна користувачем
+            </summary>
+        </member>
+        <member name="F:Server.Users.DataGridUsers">
+            <summary>
+            DataGridUsers Name Field
+            </summary>
+        </member>
+        <member name="M:Server.Users.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Server.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Server.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Server.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Server.MainWindow">
+            <summary>
+            Клас екранної форми, який відповідає за головне вікно програми
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.#ctor">
+            <summary>
+            Конструктор, що ініціалізує віконний компонент
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Метод, до завершення якого вікно не відкриєтся.
+            Корисно використовувати у випадках, коли необхідно щось підгрузити
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.MenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник подій для меню, який відкриває вікно з товарами Lb4
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.MenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник подій для меню, який відкриває вікно з користувачами Lb4
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.MenuItem_Click_2(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник подій для меню, який відкриває вікно з замовленнями Lb4
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.MenuItem_Click_3(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник подій для меню, який відкриває вікно з відгуками Lb4
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.MenuItem_Click_4(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник подій для меню, який відкриває вікно з актом купівлі Lb5
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.MenuItem_Click_5(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обробник подій для меню, який відкриває вікно зі статистикою Lb6
+            </summary>
+        </member>
+        <member name="M:Server.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Server.Products">
+            <summary>
+            Клас екранної форми, який реалізує функціонал таблиці товарів з бази даних
+            </summary>
+            <summary>
+            Products
+            </summary>
+        </member>
+        <member name="M:Server.Products.#ctor">
+            <summary>
+            Конструктор, що ініціалізує віконний компонент
+            </summary>
+        </member>
+        <member name="M:Server.Products.Window_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Обробник подій, який виконується після закриття вікна користувачем
+            </summary>
+        </member>
+        <member name="F:Server.Products.DataGridProducts">
+            <summary>
+            DataGridProducts Name Field
+            </summary>
+        </member>
+        <member name="M:Server.Products.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Server.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:Server.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:Server.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>

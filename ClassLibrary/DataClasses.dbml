@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="InternetShop" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="Products">
+    <Type Name="Products">
+      <Column Name="id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" CanBeNull="false" />
+      <Column Name="description" Type="System.String" CanBeNull="false" />
+      <Column Name="cost" Type="System.Double" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" CanBeNull="false" />
+      <Association Name="Products_Orders" Member="Orders" ThisKey="id" OtherKey="product_id" Type="Orders" />
+      <Association Name="Products_Reviews" Member="Reviews" ThisKey="id" OtherKey="product_id" Type="Reviews" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Users">
+    <Type Name="Users">
+      <Column Name="id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" CanBeNull="false" />
+      <Column Name="surname" Type="System.String" CanBeNull="false" />
+      <Column Name="email" Type="System.String" CanBeNull="false" />
+      <Column Name="password" Type="System.String" CanBeNull="false" />
+      <Column Name="address" Type="System.String" CanBeNull="false" />
+      <Column Name="telephone" Type="System.String" CanBeNull="false" />
+      <Column Name="patronymic" Type="System.String" CanBeNull="false" />
+      <Association Name="Users_Orders" Member="Orders" ThisKey="id" OtherKey="user_id" Type="Orders" />
+      <Association Name="Users_Reviews" Member="Reviews" ThisKey="id" OtherKey="user_id" Type="Reviews" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Orders">
+    <Type Name="Orders">
+      <Column Name="id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="product_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" CanBeNull="false" />
+      <Column Name="status" Type="System.String" CanBeNull="false" />
+      <Column Name="product_count" Type="System.Int32" CanBeNull="false" />
+      <Association Name="Users_Orders" Member="Users" ThisKey="user_id" OtherKey="id" Type="Users" IsForeignKey="true" />
+      <Association Name="Products_Orders" Member="Products" ThisKey="product_id" OtherKey="id" Type="Products" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="Reviews">
+    <Type Name="Reviews">
+      <Column Name="id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="product_id" Type="System.Int32" CanBeNull="false" />
+      <Column Name="rate" Type="System.Int32" CanBeNull="false" />
+      <Column Name="comment" Type="System.String" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" CanBeNull="false" />
+      <Association Name="Users_Reviews" Member="Users" ThisKey="user_id" OtherKey="id" Type="Users" IsForeignKey="true" />
+      <Association Name="Products_Reviews" Member="Products" ThisKey="product_id" OtherKey="id" Type="Products" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
